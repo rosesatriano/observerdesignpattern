@@ -25,11 +25,9 @@ public class HoleScoreDisplay implements Observer{
         if(strokes == par){
             System.out.println("Made par");
         }else if(strokes > par){
-            over = strokes - par;
-            System.out.println(+over " over par");
+            System.out.println("over par");
         }else{
-            under = par - strokes;
-            System.out.println(+under " under par");
+            System.out.println("under par");
         }
     }
 }

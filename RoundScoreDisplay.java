@@ -4,7 +4,7 @@ public class RoundScoreDisplay implements Observer{
     Subject golfer;
     int strokesTotal;
     int parTotal;
-
+    
     public RoundScoreDisplay(Subject golfer){
         this.golfer = golfer;
         golfer.registerObserver(this);
@@ -23,11 +23,9 @@ public class RoundScoreDisplay implements Observer{
         if(strokesTotal == parTotal){
             System.out.println("Made par");
         }else if(strokesTotal > parTotal){
-            int overTotal = strokesTotal - parTotal;
-            System.out.println(+overTotal " over par");
+            System.out.println("over par");
         }else{
-            int underTotal = parTotal - strokesTotal;
-            System.out.println(+underTotal " under par");
+            System.out.println("under par");
         }
     }
 }
